@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HenriksHobbyLager.Interfaces
 {
-    internal interface IProductFacade
+    public interface IProductFacade
     {
         IEnumerable<Product> GetAllProducts();
         Product GetProduct(int id);

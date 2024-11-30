@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HenriksHobbyLager.Interfaces
 {
-    internal interface IRepository
+    public interface IRepository<Product>
     {
         IEnumerable<Product> GetAll();
         Product GetById(int id);
