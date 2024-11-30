@@ -34,48 +34,13 @@ var anka = new Product
     PS. Om någon hittar det här i framtiden: Jag vet att koden kunde varit snyggare, 
     men den fungerar! Och det är huvudsaken... right?
 */
+using HenriksHobbyLager.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace RefactoringExercise
 {
-    // Interfaces som jag kopierade från Stack Overflow. 
-    // Ingen aning om vad de gör men folk säger att de är bra att ha!
-    // TODO: Kolla upp vad interface betyder... 
-    public interface IRepository<T>
-    {
-        IEnumerable<T> GetAll();
-        T GetById(int id);
-        void Add(T entity);
-        void Update(T entity);
-        void Delete(int id);
-        IEnumerable<T> Search(Func<T, bool> predicate);
-    }
-
-    public interface IProductFacade
-    {
-        IEnumerable<Product> GetAllProducts();
-        Product GetProduct(int id);
-        void CreateProduct(Product product);
-        void UpdateProduct(Product product);
-        void DeleteProduct(int id);
-        IEnumerable<Product> SearchProducts(string searchTerm);
-    }
-
-    // Min fina produktklass! 
-    // Lade till Created och LastUpdated för att det såg proffsigt ut
-    public class Product
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public decimal Price { get; set; }
-        public int Stock { get; set; }
-        public string Category { get; set; }
-        public DateTime Created { get; set; }
-        public DateTime? LastUpdated { get; set; }  // Frågetecknet är för att jag är osäker på datumet
-    }
-
     class Program
     {
         // Min fantastiska databas! Fungerar perfekt så länge datorn är igång

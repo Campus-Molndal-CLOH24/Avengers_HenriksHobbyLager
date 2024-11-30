@@ -10,8 +10,6 @@
 
   <ItemGroup>
     <Compile Include="Database\dummy.md" />
-    <Compile Include="Interfaces\dummy.md" />
-    <Compile Include="Models\dummy.md" />
   </ItemGroup>
 
 </Project>
